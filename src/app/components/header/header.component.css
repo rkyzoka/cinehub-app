@@ -4,7 +4,7 @@ header {
 }
 
 .container {
-  max-width: 1700px;
+  max-width: 1500px;
   margin: 0 auto;
 
   display: flex;
@@ -20,7 +20,9 @@ header {
 }
 
 .icons-menu {
+  list-style: none;
   display: flex;
+  align-items: center;
   gap: 8px;
 }
 
@@ -38,23 +40,17 @@ header {
   fill: #fff;
 }
 
-.icons-menu .icon-home {
-  width: 25px;
-}
-
-.icons-menu .icon-bookmark {
-  width: 17px;
-}
-
-.icons-menu .icon-login {
-  width: 20px;
-}
-
 /* responsive */
 
-@media screen and (min-width: 500px) {
-  .logo-img_mobile {
-    display: none;
+@media screen and (max-width: 1520px) {
+  .container {
+    max-width: 1100px;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .container {
+    max-width: 900px;
   }
 }
 
@@ -85,5 +81,17 @@ header {
 
   .logo .logo-img_mobile img {
     max-width: 30px;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .container {
+    max-width: 200px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .logo-img_mobile {
+    display: none;
   }
 }

@@ -69,3 +69,18 @@ img {
 .card-link:hover {
   color: #59617d;
 }
+
+@media screen and (max-width: 350px) {
+  .card {
+    max-width: 200px;
+  }
+
+  img {
+    max-width: 150px;
+    max-height: 225px;
+  }
+
+  .movie-title {
+    font-size: 0.825rem;
+  }
+}

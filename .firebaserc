@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "cinehub-bf4f4": {
+      "hosting": {
+        "cinehub": [
+          "cinehub-app"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "cinehub-bf4f4"
+  }
+}
