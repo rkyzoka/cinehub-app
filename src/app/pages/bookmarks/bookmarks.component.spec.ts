@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ViewMoreBtnComponent } from './view-more-btn.component';
+import { BookmarksComponent } from './bookmarks.component';
 
-describe('ViewMoreBtnComponent', () => {
-  let component: ViewMoreBtnComponent;
-  let fixture: ComponentFixture<ViewMoreBtnComponent>;
+describe('BookmarksComponent', () => {
+  let component: BookmarksComponent;
+  let fixture: ComponentFixture<BookmarksComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ViewMoreBtnComponent ]
+      declarations: [ BookmarksComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ViewMoreBtnComponent);
+    fixture = TestBed.createComponent(BookmarksComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
