@@ -6,10 +6,11 @@ import { BookmarksComponent } from './pages/bookmarks/bookmarks.component';
 import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'details', component: DetailsComponent },
   { path: 'bookmarks', component: BookmarksComponent },
   { path: 'login', component: LoginComponent },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({

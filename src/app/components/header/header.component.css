@@ -40,6 +40,10 @@ header {
   fill: #fff;
 }
 
+.activated svg {
+  fill: #fff;
+}
+
 /* responsive */
 
 @media screen and (max-width: 1520px) {
