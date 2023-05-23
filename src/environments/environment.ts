@@ -1,5 +1,9 @@
 export const environment = {
-  production: false,
+  production: true,
+  tmdbApi: 'https://api.themoviedb.org/3/discover/movie/',
+  tmdbKey: 'api_key=ff2da2831d38036d95b1bef27d3b8a8f',
+  tmdbSearch: 'https://api.themoviedb.org/3/search/movie/',
+  tmdbImg: 'https://image.tmdb.org/t/p/original/',
   firebase: {
     projectId: 'cinehub-bf4f4',
     appId: '1:444137153722:web:443c89224a8cd30a258e83',

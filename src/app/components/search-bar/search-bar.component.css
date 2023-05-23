@@ -1,0 +1,21 @@
+.search-bar label {
+  position: relative;
+  padding: 12px;
+}
+
+.search-bar input {
+  padding: 0.6rem 1.4rem;
+  font-size: 0.8rem;
+  color: #fff;
+  background: #232631;
+  border: none;
+  border-radius: 6px;
+  outline: #ffff61;
+
+  transition: 0.2s;
+}
+
+.search-bar input:focus {
+  margin-right: 1.2rem;
+  transform: scale(1.1);
+}

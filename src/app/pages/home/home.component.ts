@@ -1,11 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { IMovie } from 'src/app/models/IMovie';
+import { MovieService } from 'src/app/services/movie.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
-  moviePoster: string =
-    'https://musicart.xboxlive.com/7/4d4d6500-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080';
+export class HomeComponent implements OnInit {
+  movieList!: IMovie[];
+
+  constructor(private service: MovieService) {}
+
+  ngOnInit() {
+    this.service.getMovie().subscribe({
+      next: (res) => (this.movieList = res.results),
+    });
+  }
 }
