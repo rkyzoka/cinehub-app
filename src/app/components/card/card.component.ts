@@ -17,6 +17,5 @@ export class CardComponent {
     vote_average: 0,
   };
 
-  cardDetails: string =
-    'https://www.google.com/search?q=avatar+the+way+of+water';
+  cardDetails: string = '/details/1';
 }

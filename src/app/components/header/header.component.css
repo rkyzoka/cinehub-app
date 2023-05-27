@@ -56,7 +56,29 @@
 
 @media screen and (max-width: 980px) {
   .container {
-    max-width: 600px;
+    max-width: 800px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .container {
+    max-width: 680px;
+  }
+
+  .header .logo img {
+    max-width: 100px;
+  }
+
+  .icons-menu .svg-home {
+    width: 19px;
+  }
+
+  .icons-menu .svg-bookmarks {
+    width: 15px;
+  }
+
+  .icons-menu .svg-login {
+    width: 17px;
   }
 }
 

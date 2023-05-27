@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
-import { IMovie } from '../models/IMovie';
 
 @Injectable({
   providedIn: 'root',
@@ -22,12 +21,12 @@ export class MovieService {
   }
 
   getMovie(): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}?${this.apiKey}`);
+    return this.http.get(`${this.apiUrl}?${this.apiKey}`);
   }
 
   searchMovie(movie: any): Observable<any> {
-    return this.http.get<any>(
-      `${this.apiSearch}?${this.apiKey}&query=${movie}`
+    return this.http.get(
+      `${this.apiSearch}?${this.apiKey}&query=${movie.movieName}`
     );
   }
 }
