@@ -1,10 +1,11 @@
 export interface IMovieDetail {
   img: string;
   title: string;
-  rating: number | null;
+  year: string;
+  rating: number;
   minutes: number;
   sinopse: string;
   cast: string;
-  budget: number | null;
-  boxOffice: number | null;
+  budget: number;
+  revenue: number;
 }

@@ -16,6 +16,4 @@ export class CardComponent {
     poster_path: '',
     vote_average: 0,
   };
-
-  cardDetails: string = '/details/1';
 }

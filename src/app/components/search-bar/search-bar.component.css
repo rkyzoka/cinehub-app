@@ -28,13 +28,13 @@
 }
 
 .results {
+  max-height: 380px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   gap: 2px;
 
   position: absolute;
-  max-height: 380px;
-  max-width: 400px;
   overflow-y: scroll;
   z-index: 1;
 
@@ -43,22 +43,25 @@
 }
 
 .movie {
-  padding: 12px;
+  padding: 6px;
   display: flex;
   gap: 8px;
   color: #fff;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
+  text-decoration: none;
 }
 
 .movie img {
-  max-width: 70px;
+  max-width: 45px;
 }
 
 .movie div p {
+  margin-top: 6px;
+  font-size: 0.7rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 200px;
+  max-width: 300px;
 }
 
 @media screen and (min-width: 700px) and (max-width: 840px) {

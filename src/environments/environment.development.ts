@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
-  tmdbApi: 'https://api.themoviedb.org/3/discover/movie/',
+  tmdbApi: 'https://api.themoviedb.org/3',
   tmdbKey: 'api_key=ff2da2831d38036d95b1bef27d3b8a8f',
   tmdbSearch: 'https://api.themoviedb.org/3/search/movie',
   tmdbImg: 'https://image.tmdb.org/t/p/original',

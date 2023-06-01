@@ -21,12 +21,16 @@ export class MovieService {
   }
 
   getMovie(): Observable<any> {
-    return this.http.get(`${this.apiUrl}?${this.apiKey}`);
+    return this.http.get(`${this.apiUrl}/discover/movie/?${this.apiKey}`);
   }
 
   searchMovie(movie: any): Observable<any> {
     return this.http.get(
       `${this.apiSearch}?${this.apiKey}&query=${movie.movieName}`
     );
+  }
+
+  getMovieDetails(id: any): Observable<any> {
+    return this.http.get(`${this.apiUrl}/movie/${id}?${this.apiKey}`);
   }
 }
