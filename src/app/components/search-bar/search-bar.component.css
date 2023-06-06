@@ -28,6 +28,8 @@
 }
 
 .results {
+  margin-top: 16px;
+  margin-left: -70px;
   max-height: 380px;
   max-width: 400px;
   display: flex;

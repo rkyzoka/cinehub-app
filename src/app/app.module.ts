@@ -17,6 +17,7 @@ import { DetailsComponent } from './pages/details/details.component';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 import { LoginComponent } from './pages/login/login.component';
 import { BookmarksComponent } from './pages/bookmarks/bookmarks.component';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { BookmarksComponent } from './pages/bookmarks/bookmarks.component';
     MovieDetailsComponent,
     LoginComponent,
     BookmarksComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
