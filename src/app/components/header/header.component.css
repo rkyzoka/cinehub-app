@@ -40,6 +40,10 @@
   fill: #fff;
 }
 
+app-sidebar {
+  display: none;
+}
+
 /* responsive */
 
 @media screen and (max-width: 1520px) {
@@ -80,6 +84,10 @@
   .icons-menu .svg-login {
     width: 17px;
   }
+
+  app-search-bar {
+    margin-bottom: 0.5rem;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -90,9 +98,13 @@
   .icons-menu {
     display: none;
   }
+
+  app-sidebar {
+    display: flex;
+  }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 540px) {
   .container {
     max-width: 312px;
   }
@@ -112,7 +124,7 @@
   }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 540px) {
   .logo-img_mobile {
     display: none;
   }

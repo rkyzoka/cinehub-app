@@ -1,0 +1,89 @@
+button {
+  width: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+button svg {
+  fill: #66666f;
+  transition: 0.2s;
+}
+
+button svg:hover {
+  fill: #fff;
+}
+
+.opened-sidebar {
+  position: absolute;
+  display: flex;
+  top: 0;
+  right: 0;
+  transition: left 0.3s;
+}
+
+.closed-sidebar,
+.show-btn {
+  display: none;
+  transition: right 0.3s;
+}
+
+.block-display {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  opacity: 0.8;
+}
+
+.container {
+  width: 70px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #14171c;
+}
+
+.icons-menu {
+  margin-top: 2rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.icons-menu svg {
+  fill: #66666f;
+  transition: 0.2s;
+}
+
+.icons-menu svg:hover {
+  fill: #fff;
+}
+
+.activated svg {
+  fill: #fff;
+}
+
+.svg-home,
+.svg-login {
+  width: 1.5rem;
+}
+
+.svg-bookmarks {
+  width: 1.1rem;
+}
+
+.my-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1.2rem;
+}
+
+.my-links :first-child:hover,
+.my-links :last-child:hover {
+  transform: scale(0.9);
+}

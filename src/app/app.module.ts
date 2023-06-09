@@ -18,6 +18,7 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
 import { LoginComponent } from './pages/login/login.component';
 import { BookmarksComponent } from './pages/bookmarks/bookmarks.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
     LoginComponent,
     BookmarksComponent,
     SignUpComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
