@@ -1,3 +1,7 @@
+body {
+  overflow: hidden;
+}
+
 button {
   width: 20px;
   background: none;
@@ -19,13 +23,17 @@ button svg:hover {
   display: flex;
   top: 0;
   right: 0;
-  transition: left 0.3s;
+  transition: right 0.3s ease;
 }
 
-.closed-sidebar,
-.show-btn {
+.closed-sidebar {
+  position: absolute;
+  right: -70px;
+}
+
+.close-btn,
+.close-block-display {
   display: none;
-  transition: right 0.3s;
 }
 
 .block-display {
@@ -51,6 +59,10 @@ button svg:hover {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+}
+
+.icons-menu a {
+  padding: 0.8rem;
 }
 
 .icons-menu svg {

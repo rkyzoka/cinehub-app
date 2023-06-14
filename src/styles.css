@@ -10,4 +10,9 @@
 
 body {
   background-color: #191a23;
+  overflow-x: hidden;
+}
+
+.no-scroll {
+  overflow: hidden;
 }

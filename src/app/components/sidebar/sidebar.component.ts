@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,11 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent {
-  sideBarOpened: boolean = true;
+  sidebarState: boolean = false;
   showBtn: boolean = false;
+  showBlockDisplay: boolean = false;
+
+  constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
 
   toggleSidebar() {
-    this.sideBarOpened = !this.sideBarOpened;
+    this.sidebarState = !this.sidebarState;
     this.showBtn = !this.showBtn;
+    this.showBlockDisplay = !this.showBlockDisplay;
+
+    if (this.sidebarState) {
+      this.renderer.addClass(
+        this.elementRef.nativeElement.ownerDocument.body,
+        'no-scroll'
+      );
+    } else {
+      this.renderer.removeClass(
+        this.elementRef.nativeElement.ownerDocument.body,
+        'no-scroll'
+      );
+    }
   }
 }
