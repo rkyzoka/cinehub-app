@@ -11,7 +11,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { CardComponent } from './components/card/card.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { BurgerButtonComponent } from './components/burger-button/burger-button.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
@@ -27,7 +26,6 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     SearchBarComponent,
     CardComponent,
     FooterComponent,
-    BurgerButtonComponent,
     HomeComponent,
     DetailsComponent,
     MovieDetailsComponent,

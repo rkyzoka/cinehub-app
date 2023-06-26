@@ -44,6 +44,21 @@ h1 {
   outline: 1.6px solid grey;
 }
 
+.signin,
+.signin a {
+  font-size: 0.9rem;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.signin a {
+  color: #fff031;
+}
+
+.signin a:hover {
+  color: #fff;
+}
+
 .btn {
   margin-top: 6px;
   width: 100%;
@@ -66,4 +81,20 @@ button {
 
 button:hover {
   background-color: #fff031;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+@media screen and (max-width: 512px) {
+  .sign-up {
+    max-width: 350px;
+  }
+
+  .form div input {
+    max-width: 290px;
+  }
 }

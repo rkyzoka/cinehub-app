@@ -10,6 +10,7 @@ button {
 }
 
 button svg {
+  margin-top: 5px;
   fill: #66666f;
   transition: 0.2s;
 }
@@ -27,8 +28,8 @@ button svg:hover {
 }
 
 .closed-sidebar {
-  position: absolute;
-  right: -70px;
+  position: fixed;
+  right: -150px;
 }
 
 .close-btn,
@@ -98,4 +99,11 @@ button svg:hover {
 .my-links :first-child:hover,
 .my-links :last-child:hover {
   transform: scale(0.9);
+}
+
+@media screen and (max-width: 300px) {
+  button svg {
+    margin-right: 6px;
+    width: 15px;
+  }
 }

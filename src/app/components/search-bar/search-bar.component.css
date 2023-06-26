@@ -39,6 +39,7 @@
   position: absolute;
   overflow-y: scroll;
   z-index: 1;
+  overflow-x: hidden;
 
   background-color: #2d3444;
   border-radius: 6px;
@@ -87,5 +88,21 @@
   }
   .search-btn svg {
     width: 10px;
+  }
+
+  .results {
+    max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .results {
+    max-width: auto;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .search-btn svg {
+    display: none;
   }
 }

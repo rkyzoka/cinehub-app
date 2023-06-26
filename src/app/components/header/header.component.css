@@ -4,7 +4,7 @@
 
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 
   padding-top: 1.8rem;
   padding-bottom: 1rem;
@@ -121,6 +121,8 @@ app-sidebar {
 @media screen and (max-width: 330px) {
   .container {
     max-width: 200px;
+    justify-content: center;
+    gap: 1.5rem;
   }
 }
 
