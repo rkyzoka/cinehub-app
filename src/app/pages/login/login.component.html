@@ -1,17 +1,21 @@
 <section class="sign-in">
     <div class="container">
         <h1>Sign in</h1>
-        <form class="form">
+        <form class="form" [formGroup]="form">
             <div>
-                <input type="email" id="email" placeholder="Email">
+                <input type="email" id="email" placeholder="Email" formControlName="email">
                 <label for="email"></label>
             </div>
             <div>
-                <input type="password" id="password" placeholder="Password">
-                <label for="password"></label>
+                <input type="password" id="password" placeholder="Password" formControlName="password">
+                <label for=" password"></label>
             </div>
+            <div class="fpassword-div"><button class="fpassword-btn" (click)="recoverPassword()"
+                    [disabled]="!form.get('email')!.valid">Forgot
+                    password?</button></div>
             <p class="signup">don't have an account? <a routerLink="/signUp">create an account</a></p>
-            <div class="btn"><button>Sign in</button></div>
+            <div class="btn"><button class="signin" [disabled]="!form.valid" (click)="login()">Sign
+                    in</button></div>
         </form>
     </div>
 </section>

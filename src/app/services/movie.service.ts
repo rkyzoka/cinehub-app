@@ -21,7 +21,7 @@ export class MovieService {
   }
 
   getMovie(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/discover/movie/?${this.apiKey}`);
+    return this.http.get(`${this.apiUrl}/discover/movie?${this.apiKey}`);
   }
 
   searchMovie(movie: any): Observable<any> {

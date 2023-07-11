@@ -59,6 +59,39 @@ h1 {
   color: #fff;
 }
 
+button {
+  width: 60%;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.fpassword-div {
+  width: 70%;
+}
+
+.fpassword-btn {
+  opacity: 0.6;
+  background: transparent;
+}
+
+.fpassword-btn:hover {
+  opacity: 1;
+}
+
+.signin {
+  padding: 0.7rem;
+  font-size: 0.9rem;
+  background-color: #e6c924;
+}
+
+.signin:hover {
+  background-color: #fff031;
+}
+
 .btn {
   margin-top: 6px;
   width: 100%;
@@ -66,27 +99,11 @@ h1 {
   justify-content: center;
 }
 
-button {
-  width: 60%;
-  padding: 0.7rem;
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: #fff;
-  background-color: #e6c924;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background-color: #fff031;
-}
-
 footer {
   width: 100%;
   position: fixed;
   bottom: 0;
+  z-index: -1;
 }
 
 @media screen and (max-width: 512px) {

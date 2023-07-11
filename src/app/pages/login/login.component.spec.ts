@@ -5,19 +5,23 @@ import { LoginComponent } from './login.component';
 describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
+  let page: any;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
-    })
-    .compileComponents();
+      declarations: [LoginComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(LoginComponent);
     component = fixture.componentInstance;
+    page = fixture.debugElement.nativeElement;
+
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('given form, when email is empty, then forgot password button should be disabled ', () => {
+    expect(
+      page.querySelector('[test-id="forgot-password-button"]').disabled
+    ).toBeTruthy();
   });
 });

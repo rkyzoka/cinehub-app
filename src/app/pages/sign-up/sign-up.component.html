@@ -3,25 +3,27 @@
         <h1>Sign up</h1>
         <form class="form">
             <div>
-                <input type="text" id="name" placeholder="Name">
-                <label for="name"></label>
-            </div>
-            <div>
-                <input type="email" id="email" placeholder="Email">
+                <input type="text" id="name" placeholder="Name" formControlName="name">
                 <label for="email"></label>
             </div>
             <div>
-                <input type="password" id="password" placeholder="Password">
+                <input type="email" id="email" placeholder="Email" formControlName="email">
+                <label for="email"></label>
+            </div>
+            <div>
+                <input type="password" id="password" placeholder="Password" formControlName="password">
                 <label for="password"></label>
             </div>
             <div>
-                <input type="password" id="c-password" placeholder="Confirm your password">
+                <input type="password" id="c-password" placeholder="Confirm your password" formControlName="cPassword">
                 <label for="c-password"></label>
             </div>
 
-            <p class="signin">already have an account? <a routerLink="/signIn">Log In</a></p>
+            <p class="signin">do you have an account? <a routerLink="/signIn">Log In</a></p>
 
-            <div class="btn"><button>Sign up</button></div>
+            <div class="btn">
+                <button (click)="signUp()">Sign up</button>
+            </div>
 
         </form>
     </div>
