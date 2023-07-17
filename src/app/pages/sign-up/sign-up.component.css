@@ -20,12 +20,7 @@ h1 {
 .form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-}
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  gap: 1.2rem;
 }
 
 .form div input {
@@ -42,6 +37,12 @@ h1 {
 
 .form div input:focus {
   outline: 1.6px solid grey;
+}
+
+.validation {
+  font-size: 0.7rem;
+  color: red;
+  margin: 8px 0 0 0;
 }
 
 .signin,

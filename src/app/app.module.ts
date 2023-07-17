@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { DatabaseModule } from '@angular/fire/database';
 
 import { HeaderComponent } from './components/header/header.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
@@ -46,6 +47,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
+    DatabaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

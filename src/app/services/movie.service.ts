@@ -33,4 +33,6 @@ export class MovieService {
   getMovieDetails(id: any): Observable<any> {
     return this.http.get(`${this.apiUrl}/movie/${id}?${this.apiKey}`);
   }
+
+  saveMovie(id: number) {}
 }

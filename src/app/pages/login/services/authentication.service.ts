@@ -1,6 +1,7 @@
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { getDatabase, ref, set } from 'firebase/database';
 
 @Injectable({
   providedIn: 'root',
@@ -8,7 +9,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 export class AuthenticationService {
   constructor(private auth: AngularFireAuth, private router: Router) {}
 
-  signIn(params: Data) {
+  signIn(params: SignIn) {
     this.auth.signInWithEmailAndPassword(params.email, params.password).then(
       () => {
         localStorage.setItem('token', 'true');
@@ -31,12 +32,15 @@ export class AuthenticationService {
     );
   }
 
-  signUp(params: Data) {
+  signUp(params: SignUp) {
     this.auth
       .createUserWithEmailAndPassword(params.email, params.password)
       .then(
-        () => {
-          alert('Account created successfully!');
+        (cred) => {
+          const db = getDatabase();
+          set(ref(db, 'users/' + cred.user?.uid), {
+            username: params.name,
+          });
           this.router.navigate(['/signIn']);
         },
         (error: any) => {
@@ -59,7 +63,14 @@ export class AuthenticationService {
   }
 }
 
-type Data = {
+type SignIn = {
   email: string;
   password: string;
+};
+
+type SignUp = {
+  name: string;
+  email: string;
+  password: string;
+  cPassword: string;
 };

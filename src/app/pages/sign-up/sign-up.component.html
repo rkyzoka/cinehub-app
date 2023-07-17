@@ -1,26 +1,37 @@
 <section class="sign-up">
     <div class="container">
         <h1>Sign up</h1>
-        <form class="form">
+        <form [formGroup]="form" class="form" #formDir="ngForm">
             <div>
+                <label for="email"></label>
                 <input type="text" id="name" placeholder="Name" formControlName="name">
-                <label for="email"></label>
+                <div class="validation" *ngIf="name!.invalid && name!.touched">
+                    <p *ngIf="name?.errors?.['required']">Name is required</p>
+                    <p *ngIf="name?.errors?.['minlength']">Name must be at least 3 characters</p>
+                </div>
             </div>
             <div>
+                <label for="email"></label>
                 <input type="email" id="email" placeholder="Email" formControlName="email">
-                <label for="email"></label>
+                <div class="validation" *ngIf="email!.invalid && email!.touched">
+                    <p *ngIf="email?.errors?.['required']">Email is required</p>
+                </div>
             </div>
             <div>
-                <input type="password" id="password" placeholder="Password" formControlName="password">
                 <label for="password"></label>
+                <input type="password" id="password" placeholder="Password" formControlName="password">
+                <div class="validation" *ngIf="password!.invalid && password!.touched">
+                    <p *ngIf="password?.errors?.['required']">Password is required</p>
+                </div>
             </div>
             <div>
-                <input type="password" id="c-password" placeholder="Confirm your password" formControlName="cPassword">
                 <label for="c-password"></label>
+                <input type="password" id="c-password" placeholder="Confirm your password" formControlName="cPassword">
+                <div class="validation" *ngIf="cPassword!.invalid && cPassword!.touched">
+                    <p *ngIf="cPassword?.errors?.['required']">Confirm your password</p>
+                </div>
             </div>
-
             <p class="signin">do you have an account? <a routerLink="/signIn">Log In</a></p>
-
             <div class="btn">
                 <button (click)="signUp()">Sign up</button>
             </div>

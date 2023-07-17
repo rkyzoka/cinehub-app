@@ -30,6 +30,10 @@ export class LoginComponent implements OnInit {
   }
 
   recoverPassword() {
+    if (this.form.value.email === '') {
+      alert('Type your email!');
+      return;
+    }
     this.auth.recoverPassword(this.form.value.email);
   }
 }

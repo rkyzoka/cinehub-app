@@ -10,16 +10,39 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class SignUpComponent implements OnInit {
   form!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, auth: AuthenticationService) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private auth: AuthenticationService
+  ) {}
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      name: ['', Validators.required],
+      name: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', Validators.required, Validators.email],
       password: ['', Validators.required],
       cPassword: ['', Validators.required],
     });
   }
 
-  signUp() {}
+  get name() {
+    return this.form.get('name');
+  }
+  get email() {
+    return this.form.get('email');
+  }
+  get password() {
+    return this.form.get('password');
+  }
+  get cPassword() {
+    return this.form.get('cPassword');
+  }
+
+  signUp() {
+    this.auth.signUp({
+      name: this.form.get('name')?.value,
+      email: this.form.get('email')?.value,
+      password: this.form.get('password')?.value,
+      cPassword: this.form.get('cPassword')?.value,
+    });
+  }
 }
