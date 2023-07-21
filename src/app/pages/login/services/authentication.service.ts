@@ -12,7 +12,6 @@ export class AuthenticationService {
   signIn(params: SignIn) {
     this.auth.signInWithEmailAndPassword(params.email, params.password).then(
       () => {
-        localStorage.setItem('token', 'true');
         this.router.navigate(['/']);
       },
       (error: any) => {
@@ -40,6 +39,7 @@ export class AuthenticationService {
           const db = getDatabase();
           set(ref(db, 'users/' + cred.user?.uid), {
             username: params.name,
+            bookmarks: [],
           });
           this.router.navigate(['/signIn']);
         },
@@ -52,7 +52,6 @@ export class AuthenticationService {
   signOut() {
     this.auth.signOut().then(
       () => {
-        localStorage.removeItem('token');
         this.router.navigate(['/']);
       },
       (error: any) => {

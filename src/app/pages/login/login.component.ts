@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthenticationService } from './services/authentication.service';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-login',
@@ -9,16 +10,22 @@ import { AuthenticationService } from './services/authentication.service';
 })
 export class LoginComponent implements OnInit {
   form!: FormGroup;
+  user!: any;
 
   constructor(
     private formBuilder: FormBuilder,
-    private auth: AuthenticationService
+    private auth: AuthenticationService,
+    private afAuth: AngularFireAuth
   ) {}
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
+    });
+
+    this.afAuth.authState.subscribe((user) => {
+      this.user = user;
     });
   }
 
@@ -35,5 +42,9 @@ export class LoginComponent implements OnInit {
       return;
     }
     this.auth.recoverPassword(this.form.value.email);
+  }
+
+  logout() {
+    this.auth.signOut();
   }
 }
