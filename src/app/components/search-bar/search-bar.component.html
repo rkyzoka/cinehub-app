@@ -8,13 +8,15 @@
         </form>
 </section>
 
-<section class="results">
-        <a href="/details/{{result.id}}" *ngFor="let result of searchResult" class="movie">
-                <img *ngIf="result.poster_path" src="https://image.tmdb.org/t/p/original/{{result.poster_path}}"
-                        alt="{{result.title}} Poster">
-                <div *ngIf="result.poster_path">
-                        <h1>{{result.title}}</h1>
-                        <p>{{result.overview}}</p>
-                </div>
-        </a>
+<section class="container">
+        <div class="results">
+                <a href="/details/{{result.id}}" *ngFor="let result of searchResult" class="movie">
+                        <img *ngIf="result.poster_path" src="https://image.tmdb.org/t/p/original/{{result.poster_path}}"
+                                alt="{{result.title}} Poster">
+                        <div *ngIf="result.poster_path">
+                                <h1>{{result.title}}</h1>
+                                <p>{{result.overview}}</p>
+                        </div>
+                </a>
+        </div>
 </section>

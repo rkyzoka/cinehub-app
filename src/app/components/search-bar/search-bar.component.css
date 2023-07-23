@@ -27,14 +27,12 @@
   width: 14px;
 }
 
-.results {
+.container {
+  max-height: 350px;
   margin-top: 16px;
-  margin-left: -70px;
-  max-height: 380px;
-  max-width: 400px;
+  margin-left: -9rem;
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  justify-content: start;
 
   position: absolute;
   overflow-y: scroll;
@@ -43,6 +41,10 @@
 
   background-color: #2d3444;
   border-radius: 6px;
+}
+
+.results {
+  width: 500px;
 }
 
 .movie {
@@ -90,19 +92,30 @@
     width: 10px;
   }
 
-  .results {
+  .container {
+    margin-left: -6rem;
     max-width: 350px;
   }
 }
 
-@media screen and (max-width: 400px) {
-  .results {
-    max-width: auto;
+@media screen and (max-width: 540px) {
+  .container {
+    margin-left: -3rem;
+    max-width: 300px;
   }
 }
 
-@media screen and (max-width: 330px) {
-  .search-btn svg {
+@media screen and (max-width: 430px) {
+  .container {
+    margin-right: 4rem;
+  }
+  .search-btn {
     display: none;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .container {
+    max-width: 280px;
   }
 }

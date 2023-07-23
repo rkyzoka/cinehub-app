@@ -1,12 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  getDatabase,
-  onValue,
-  push,
-  ref,
-  set,
-  update,
-} from 'firebase/database';
+import { getDatabase, push, ref } from 'firebase/database';
 import { IMovie } from 'src/app/models/IMovie';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
@@ -33,9 +26,7 @@ export class BookmarkService {
     });
   }
 
-  getBookmarks(userId: string) {
-    // get the data.bookmarks and return it to show in the bookmarks page
-  }
+  getBookmarks(userId: string) {}
 
   deleteBookmark() {}
 }
