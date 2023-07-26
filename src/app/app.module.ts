@@ -23,6 +23,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { BookmarksComponent } from './pages/bookmarks/bookmarks.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { CardBookmarksComponent } from './components/card-bookmarks/card-bookmarks.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     BookmarksComponent,
     SignUpComponent,
     SidebarComponent,
+    CardBookmarksComponent,
   ],
   imports: [
     BrowserModule,

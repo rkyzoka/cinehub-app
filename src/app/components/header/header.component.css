@@ -30,6 +30,7 @@
 .icons-menu svg {
   fill: #66666f;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .icons-menu svg:hover {

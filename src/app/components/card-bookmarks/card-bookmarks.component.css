@@ -34,7 +34,7 @@ img {
   transition: 0.3s;
 }
 
-.save {
+.unsave {
   cursor: pointer;
 }
 

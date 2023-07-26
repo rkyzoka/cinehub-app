@@ -35,12 +35,7 @@ export class AuthenticationService {
     this.auth
       .createUserWithEmailAndPassword(params.email, params.password)
       .then(
-        (cred) => {
-          const db = getDatabase();
-          set(ref(db, 'users/' + cred.user?.uid), {
-            username: params.name,
-            bookmarks: [],
-          });
+        () => {
           this.router.navigate(['/signIn']);
         },
         (error: any) => {

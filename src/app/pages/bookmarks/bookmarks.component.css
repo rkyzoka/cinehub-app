@@ -5,9 +5,64 @@
   color: #fff;
 }
 
-footer {
+.container-cards {
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.footer {
   width: 100%;
-  position: absolute;
   bottom: 0;
-  z-index: -1;
+}
+
+@media screen and (max-width: 1520px) {
+  .container-cards {
+    max-width: 1200px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .container-cards {
+    max-width: 1000px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .container-cards {
+    max-width: 850px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .container-cards {
+    max-width: 700px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-cards {
+    max-width: 600px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .container-cards {
+    max-width: 300px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .container-cards {
+    max-width: 200px;
+  }
 }

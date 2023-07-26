@@ -15,7 +15,7 @@
             </div>
             <p class="signup">don't have an account? <a routerLink="/signUp">create an account</a></p>
             <div class="btn">
-                <button class="signin" (click)="login()">Sign in</button>
+                <button type="submit" class="signin" (click)="login()">Sign in</button>
             </div>
         </form>
     </div>
@@ -23,7 +23,7 @@
 
 <div *ngIf="user" class="signout-div">
     <div class="btn">
-        <button class="logout-btn" (click)="logout()">Sign Out</button>
+        <button class="logout" (click)="logout()">Sign Out</button>
     </div>
 </div>
 

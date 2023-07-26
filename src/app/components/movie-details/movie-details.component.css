@@ -22,13 +22,6 @@ h3 {
   display: flex;
   align-items: center;
 }
-.saved {
-  margin-bottom: 0.6rem;
-}
-
-.saved svg {
-  cursor: pointer;
-}
 
 /* responsive */
 

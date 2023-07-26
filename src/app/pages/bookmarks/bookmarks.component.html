@@ -1,7 +1,10 @@
-<p class="hello">Hello, your favorite movies will appear here.</p>
+<p *ngIf="!bookmarksList || bookmarksList.length == 0" class="hello">Hello, your favorite movies will appear here.</p>
 
-<div class="container"></div>
+<div class="container-cards">
+    <app-card-bookmarks *ngFor=" let bookmarkObject of bookmarksList "
+        [bookmarkCard]="bookmarkObject"></app-card-bookmarks>
+</div>
 
 <footer>
-    <app-footer></app-footer>
+    <app-footer *ngIf="bookmarksList.length > 4" class="footer"></app-footer>
 </footer>
